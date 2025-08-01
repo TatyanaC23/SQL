@@ -1,4 +1,4 @@
-#This project utilizes the following Superstore data:
+#This project utilizes the following Superstore dataset:
 
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
@@ -27,23 +27,23 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
-#For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices.
+# For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices.
 
-#Using a SELECT statement, order the items by price.
+# Using a SELECT statement, order the items by price.
 SELECT item_name, price
 FROM superstore
 ORDER BY price DESC;
 
-#Show a statistic about the items price.
+# Show a statistic about the items price.
 SELECT SUM(price)
 FROM superstore;
 
-#Show a statistic about the price for items in the category of "Kitchen Supplies".
+# Show a statistic about the price for items in the category of "Kitchen Supplies".
 SELECT AVG(price)
 FROM superstore
 WHERE category="Kitchen Supplies";
 
-#Find the number of items where stock_quantity is greater than 50. 
+# Find the number of items where stock_quantity is greater than 50. 
 SELECT COUNT(item_id)
 FROM superstore
 WHERE stock_quantity>50;
